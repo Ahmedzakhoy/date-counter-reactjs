@@ -13,7 +13,7 @@ function Counter() {
   date.setDate(date.getDate() + count);
 
   return (
-    <div>
+    <div className="container">
       <div>
         <input
           type="range"
@@ -26,13 +26,17 @@ function Counter() {
       </div>
 
       <div>
-        <button onClick={() => setCount((c) => c - step)}>-</button>
+        <button className="small-btn" onClick={() => setCount((c) => c - step)}>
+          -
+        </button>
         <input
           type="text"
           value={count}
           onChange={(e) => setCount(Number(e.target.value))}
         />
-        <button onClick={() => setCount((c) => c + step)}>+</button>
+        <button className="small-btn" onClick={() => setCount((c) => c + step)}>
+          +
+        </button>
       </div>
 
       <p>
